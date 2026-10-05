@@ -1,149 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Shasta Valley RCD | Connect</title>
-
-  <meta
-    name="description"
-    content="Connect with the Shasta Valley Resource Conservation District."
-  >
+  <title>Shasta Valley RCD</title>
 
   <style>
-    :root {
-      --green: #5f8f8b;
-      --green-dark: #3f6f6a;
-      --cream: #f5f1e8;
-      --paper: #fffdf8;
-      --text: #26332f;
-      --muted: #66716d;
-      --line: #d8d2c8;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
-      min-height: 100vh;
+      background: #f5f1e8;
       font-family: Arial, Helvetica, sans-serif;
-      background: var(--cream);
-      color: var(--text);
+      color: #26332f;
     }
 
     .page {
-      width: min(92%, 470px);
+      max-width: 470px;
       margin: 0 auto;
-      padding: 34px 0 28px;
+      padding: 35px 20px;
       text-align: center;
     }
 
     .logo {
-      display: block;
-      width: min(82%, 320px);
+      width: 300px;
+      max-width: 90%;
       height: auto;
-      margin: 0 auto 18px;
+      margin-bottom: 20px;
     }
 
-    .intro {
-      margin-bottom: 28px;
-    }
-
-    .intro p {
-      margin: 0;
-      color: var(--muted);
+    .subtitle {
       font-size: 15px;
-      line-height: 1.5;
+      color: #66716d;
+      margin-bottom: 30px;
     }
 
-    .links {
-      display: grid;
-      gap: 13px;
-    }
-
-    .link {
+    .button {
       display: block;
       width: 100%;
-      padding: 16px 18px;
-      border: 1px solid var(--green-dark);
-      border-radius: 7px;
+      box-sizing: border-box;
+      margin: 12px 0;
+      padding: 17px 18px;
 
-      background: var(--paper);
-      color: var(--green-dark);
+      background: white;
+      color: #3f6f6a;
+
+      border: 1px solid #3f6f6a;
+      border-radius: 6px;
 
       text-decoration: none;
       font-size: 16px;
-      font-weight: 700;
-      line-height: 1.25;
-
-      box-shadow: 0 2px 7px rgba(38, 51, 47, 0.06);
-
-      transition:
-        background 0.15s ease,
-        color 0.15s ease,
-        transform 0.15s ease;
+      font-weight: bold;
     }
 
-    .link:hover,
-    .link:focus-visible {
-      background: var(--green-dark);
+    .button:hover {
+      background: #3f6f6a;
       color: white;
-      transform: translateY(-1px);
     }
 
-    .link.featured {
-      background: var(--green-dark);
+    .featured {
+      background: #3f6f6a;
       color: white;
-      border-color: var(--green-dark);
-      padding: 18px;
     }
 
-    .link.featured:hover,
-    .link.featured:focus-visible {
-      background: #345d59;
-    }
-
-    .link span {
+    .featured span {
       display: block;
       margin-top: 5px;
       font-size: 13px;
-      font-weight: 400;
-      opacity: 0.88;
+      font-weight: normal;
     }
 
-    .social-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 13px;
+    .socials {
+      display: flex;
+      gap: 12px;
+    }
+
+    .socials .button {
+      flex: 1;
     }
 
     .footer {
       margin-top: 30px;
       padding-top: 18px;
+      border-top: 1px solid #d8d2c8;
 
-      border-top: 1px solid var(--line);
-
-      color: var(--muted);
       font-size: 12px;
       line-height: 1.5;
+      color: #66716d;
     }
 
-    @media (max-width: 380px) {
-      .page {
-        width: 90%;
-        padding-top: 24px;
-      }
-
-      .logo {
-        width: 88%;
-      }
-
-      .social-row {
-        grid-template-columns: 1fr;
+    @media screen and (max-width: 400px) {
+      .socials {
+        display: block;
       }
     }
   </style>
@@ -151,104 +98,69 @@
 
 <body>
 
-  <main class="page">
+  <div class="page">
 
     <img
-      class="logo"
-      src="svrcd-logo.webp"
+      src="SVRCD__LOGO_LOCKUP_1_SECONDARY_COLOR.webp"
       alt="Shasta Valley Resource Conservation District"
+      class="logo"
     >
 
-    <section class="intro">
-      <p>
-        Resources, updates, and ways to connect.
-      </p>
-    </section>
+    <div class="subtitle">
+      Resources, updates, and ways to connect.
+    </div>
 
-    <section class="links">
+    <!-- Mobile Irrigation Lab -->
+    <a href="#" class="button featured">
+      Mobile Irrigation Lab
+      <span>Get more information or join the interest list</span>
+    </a>
 
-      <!--
-        MOBILE IRRIGATION LAB
+    <!-- Website -->
+    <a
+      href="https://www.svrcd.org/"
+      class="button"
+      target="_blank"
+    >
+      Visit Our Website
+    </a>
 
-        When you get the form link,
-        replace the # below with the actual URL.
-      -->
+    <!-- Contact -->
+    <a
+      href="https://www.svrcd.org/contact-us"
+      class="button"
+      target="_blank"
+    >
+      Contact SVRCD
+    </a>
+
+    <!-- Social Media -->
+    <div class="socials">
 
       <a
-        class="link featured"
-        href="#"
-      >
-        Mobile Irrigation Lab
-
-        <span>
-          Get more information or join the interest list
-        </span>
-      </a>
-
-
-      <!-- MAIN WEBSITE -->
-
-      <a
-        class="link"
-        href="https://www.svrcd.org/"
+        href="https://www.instagram.com/shastavalleyrcd/?utm_source=ig_web_button_share_sheet"
+        class="button"
         target="_blank"
-        rel="noopener noreferrer"
       >
-        Visit Our Website
+        Instagram
       </a>
-
-
-      <!-- CONTACT PAGE -->
 
       <a
-        class="link"
-        href="https://www.svrcd.org/contact-us"
+        href="https://www.facebook.com/p/Shasta-Valley-Resource-Conservation-District-100064596587595/"
+        class="button"
         target="_blank"
-        rel="noopener noreferrer"
       >
-        Contact SVRCD
+        Facebook
       </a>
 
+    </div>
 
-      <!-- SOCIAL MEDIA -->
-
-      <div class="social-row">
-
-        <a
-          class="link"
-          href="https://www.instagram.com/shastavalleyrcd/?utm_source=ig_web_button_share_sheet"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Instagram
-        </a>
-
-
-        <a
-          class="link"
-          href="https://www.facebook.com/p/Shasta-Valley-Resource-Conservation-District-100064596587595/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Facebook
-        </a>
-
-      </div>
-
-    </section>
-
-
-    <footer class="footer">
-
-      Shasta Valley Resource Conservation District
-      <br>
-
+    <div class="footer">
+      Shasta Valley Resource Conservation District<br>
       Siskiyou County, California
+    </div>
 
-    </footer>
-
-  </main>
+  </div>
 
 </body>
-
 </html>
